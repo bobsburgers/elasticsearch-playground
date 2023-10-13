@@ -1,0 +1,28 @@
+{
+  "query": {
+    "bool": {
+      "filter": [
+        {
+          "term": {
+            "type": "data-postback"
+          }
+        },
+        {
+          "term": {
+            "source.id": ""
+          }
+        },
+        {
+          "range": {
+            "metadata.time.insert": {
+              "gte": "now-1d/d",
+              "lt": "now/d"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "size": 0,
+  "track_total_hits": 10000
+}

@@ -1,0 +1,2 @@
+# -e D:/Programing/tracardi/tracardi
+elasticsearch==7.10.1
